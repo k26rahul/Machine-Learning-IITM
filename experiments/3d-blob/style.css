@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#canvas-container {
+  flex: 1;
+  position: relative;
+}
