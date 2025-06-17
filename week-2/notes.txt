@@ -1,0 +1,53 @@
+# of PCs = # of eigenvectors = # of features (d)
+
+dataset in 5d
+each sample's shape is (d * 1)
+eg. 4 samples in 3d
+x1 = [5, 2, 8]
+x2 = [1, 0, 3]
+x3 = [7, 4, 5]
+x4 = [4, 6, 2]
+
+in maths vectors are written "vertically"
+eg. a 3d vec will look like
+x1 =  10
+      15
+      11  (3 * 1)
+x1.T = 10 15 11 (1 * 3)
+
+x is a sample
+X is data matrix
+
+X = (d * n)
+=> samples are in cols
+=> features are in rows
+x1 = [5, 2, 8]
+x2 = [1, 0, 3]
+x3 = [7, 4, 5]
+x4 = [4, 6, 2]
+
+X = [
+  [5, 2, 8]
+  [1, 0, 3]
+  [7, 4, 5]
+  [4, 6, 2]
+].T
+
+X will look like:
+[
+  [5, 1, 7, 4],
+  ...
+]
+
+I want to do PCA on this data:
+x1 = [5, 2, 8]
+x2 = [1, 0, 3]
+x3 = [7, 4, 5]
+x4 = [4, 6, 2]
+
+step 1: make X data matrix, with samples in cols (d * n)
+step 2: center the X
+step 3: compute C = XX' / n
+step 4: compute eigenvalues, eigenvectors of C
+step 5: find coefficients (c = x'w) and proxies (x proxy = c.w)
+        use top k eigenvectors for w
